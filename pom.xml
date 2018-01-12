@@ -33,6 +33,13 @@
             <version>1.2.1</version>
             <scope>compile</scope>
         </dependency>
+        <!--el表达式依赖-->
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
         <!--JSTL实现定义了对旧版本servlet、jsp规范的依赖，它们与当前版本的jsp、servlet的artifactId不同
         所以需要使用exclusion对它们进行排除-->
         <dependency>
