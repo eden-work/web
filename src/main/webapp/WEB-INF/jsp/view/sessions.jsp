@@ -1,3 +1,4 @@
+<%--@elvariable id="numberOfSessions" type="java.lang.Integer"--%>
 <%@ page import="java.util.List" %>
 <%!
     private static String toString(long timeInterval)
@@ -10,7 +11,6 @@
     }
 %>
 <%
-    int numberOfSessions = (Integer)request.getAttribute("numberOfSessions");
     @SuppressWarnings("unchecked")
     List<HttpSession> sessions =
             (List<HttpSession>)request.getAttribute("sessionList");
@@ -23,7 +23,7 @@
 <body>
 <a href="<c:url value="/wrox/login?logout" />">Logout</a>
 <h2>Sessions</h2>
-应用程序中一共存在 <%= numberOfSessions %> 个活跃的session<br /><br />
+应用程序中一共存在 ${numberOfSessions} 个活跃的session<br /><br />
 <%
     long timestamp = System.currentTimeMillis();
     for(HttpSession aSession : sessions)
