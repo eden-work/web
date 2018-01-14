@@ -1,1 +1,1 @@
-<c:redirect url="/jia/profile"/>
+<c:redirect url="/jia/list"/>
