@@ -22,6 +22,7 @@ public class SessionListServlet extends HttpServlet {
             response.sendRedirect("login");
             return;
         }
+        request.setAttribute("timestamp", System.currentTimeMillis());
         request.setAttribute("numberOfSessions",
                 SessionRegistry.getNumberOfSessions());
         request.setAttribute("sessionList", SessionRegistry.getAllSessions());

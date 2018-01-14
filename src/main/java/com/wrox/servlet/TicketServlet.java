@@ -14,6 +14,7 @@ import javax.servlet.http.Part;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.Instant;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -134,6 +135,7 @@ public class TicketServlet extends HttpServlet {
         ticket.setCustomerName((String) request.getSession().getAttribute("userName"));
         ticket.setSubject(request.getParameter("subject"));
         ticket.setBody(request.getParameter("body"));
+        ticket.setDateCreated(Instant.now());
 
         // 使用Part对象接收前端input上传的文件
         Part filePart = request.getPart("file1");

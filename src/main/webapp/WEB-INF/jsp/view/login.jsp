@@ -1,22 +1,15 @@
 <%--@elvariable id="loginFailed" type="java.lang.Boolean"--%>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Customer Support</title>
-</head>
-<body>
-<h2>登录</h2>
-您必须登录这个系统<br><br>
-<c:if test="${loginFailed}">
-    <b>用户名或密码输入错误，请再试一次！</b><br><br>
-</c:if>
-<form action="<c:url value="/wrox/login"/>" method="post">
-    用户名：<br>
-    <input type="text" name="userName"/><br><br>
-    密码：<br>
-    <input type="password" name="password"/><br><br>
-
-    <input type="submit" value="登录">
-</form>
-</body>
-</html>
+<template:loggedOut htmlTitle="Log In" bodyTitle="Log In">
+    You must log in to access the customer support site.<br /><br />
+    <c:if test="${loginFailed}">
+        <b>The username and password you entered are not correct. Please try
+            again.</b><br /><br />
+    </c:if>
+    <form method="POST" action="<c:url value="/wrox/login" />">
+        Username<br />
+        <input type="text" name="userName" /><br /><br />
+        Password<br />
+        <input type="password" name="password" /><br /><br />
+        <input type="submit" value="Log In" />
+    </form>
+</template:loggedOut>

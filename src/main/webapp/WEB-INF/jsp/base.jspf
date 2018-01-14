@@ -1,3 +1,6 @@
-<%@page import="com.wrox.model.*" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="template" tagdir="/WEB-INF/tags/template" %>
+<%--与tld文件中uri属性对应--%>
+<%@ taglib prefix="wrox" uri="http://www.web.com/jsp/tld/wrox" %>
